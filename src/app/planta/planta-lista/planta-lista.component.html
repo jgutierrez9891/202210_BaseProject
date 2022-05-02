@@ -1,3 +1,33 @@
-<p>
-  planta-lista works!
-</p>
+<div class="title">
+  <h4>Vivero El Otoño</h4>
+  <hr>
+  <img src="../../../assets/imagen.jpg" style="width: 100%;">
+</div>
+
+
+<div class="container-fluid tabla">
+  <div class="row header">
+    <div class="col-auto">#</div>
+    <div class="col-3">Nombre común</div>
+    <div class="col-3">Tipo</div>
+    <div class="col-4">Clima</div>
+  </div>
+  <div class="row border-bottom" *ngFor="let planta of plantas">
+    <div *ngIf="planta.tipo"></div>
+      <div class="col-auto ids">
+         {{planta.id}}
+      </div>
+      <div class="col-3">
+        {{planta.nombre_comun}}
+      </div>
+      <div class="col-3">
+        {{planta.tipo}}
+      </div>
+      <div class="col-4">
+        {{planta.clima}}
+      </div>
+  </div>
+</div>
+
+<p>Total plantas de interior: {{interior}}</p>
+<p>Total plantas de exterior: {{exterior}}</p>
